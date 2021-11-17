@@ -1,13 +1,22 @@
 # pwned-sqlite3
 Use a local sqlite3 db for checking if a password is pwned.
 
-> You must be using Node.js v10.20.1 or above for better-sqlite3. Prebuilt binaries for better-sqlite3 are available for [LTS versions](https://nodejs.org/en/about/releases/).
+# System requirements
+
+You must be using Node.js v10.20.1 or above for better-sqlite3. Prebuilt binaries for better-sqlite3 are available for [LTS versions](https://nodejs.org/en/about/releases/).
+You need about 15,4 GBy free space for the sqlite3 database (haveIBeenPwned password list version 7).
 
 # Build your database
 
 Download the SHA-1 password list (tested with "Version 7 (ordered by hash)" from [Have I Been Pwned](https://haveibeenpwned.com/Passwords).
 
 Use build_database.py (see github-repo) to build the database. Modify if necessary the variables `path` and `dbName`. Python is about 30x faster than an equivalent solution in node.
+
+The Version 7 Database is about 15.4 GBy big. 
+
+# Performance
+
+On my Ryzen 7 4800H and 64 GB RAM it needs about 450 ms for 100.000 runs. 
 
 # Code Snippet
 
