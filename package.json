@@ -1,6 +1,6 @@
 {
 	"name": "pwned-sqlite3",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Use a local sqlite3 db for checking if a password is pwned.",
 	"main": "build/index.js",
 	"scripts": {
@@ -24,6 +24,7 @@
 		"breach",
 		"password"
 	],
+	"license": "MIT",
 	"author": "Aras Abbasi",
 	"typings": "types/index.d.ts",
 	"devDependencies": {
